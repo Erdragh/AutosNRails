@@ -1,30 +1,26 @@
 {
   "schemaVersion": 1,
   "id": "autos_n_rails",
-  "version": "${version}",
-  "name": "Autos_n_Rails",
+  "version": "1.0.0",
+  "name": "Autos'n'Rails",
   "description": "",
   "authors": [],
   "contact": {
-    "repo": "https://github.com/Jan Bayer/Autos_n_Rails"
+    "repo": "https://github.com/Erdragh/AutosNRails"
   },
   "license": "MIT",
   "icon": "assets/autos_n_rails/icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "com.github.erdragh.autos_n_rails.client.AutosNRailsClient"
-    ],
-    "main": [
-      "com.github.erdragh.autos_n_rails.AutosNRails"
-    ]
   },
   "mixins": [
     "autos_n_rails.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=${loader_version}",
+    "fabricloader": ">=0.14.14",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "1.18.2",
+    "railways": ">=1.2.2+fabric-mc1.18.2",
+    "automobility": ">=0.3+1.18.2"
   }
 }
