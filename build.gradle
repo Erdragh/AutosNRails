@@ -9,8 +9,16 @@ group = project.maven_group
 repositories {
     maven { url = "https://maven.quiltmc.org/repository/release" } // QM
     maven { url = "https://maven.parchmentmc.org" } // Parchment
-    maven { url "https://maven.shedaniel.me/" }
-    maven { url "https://maven.terraformersmc.com/releases/" }
+    maven { url = "https://maven.shedaniel.me/" }
+    maven { url = "https://maven.terraformersmc.com/releases/" }
+    maven { url = "https://api.modrinth.com/maven" }
+    maven { url = "https://hephaestus.dev/release" }
+    maven { url = "https://cursemaven.com" }
+    maven { url = "https://mvn.devos.one/snapshots/" } // Create, Porting Lib, Forge Tags, Milk Lib, Registrate
+    maven { url = "https://jitpack.io/" } // Mixin Extras, Fabric ASM
+    maven { url = "https://maven.tterrag.com/" } // Flywheel
+    maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
+    maven { url = "https://ueaj.dev/maven" }
 }
 
 dependencies {
@@ -25,6 +33,8 @@ dependencies {
 
         // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    modImplementation "dev.monarkhes:myron:${project.myron_version}"
 
     modLocalRuntime("com.terraformersmc:modmenu:${modmenu_version}")
     modLocalRuntime("me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}")
