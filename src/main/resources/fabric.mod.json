@@ -12,6 +12,9 @@
   "icon": "assets/autos_n_rails/icon.png",
   "environment": "*",
   "entrypoints": {
+    "main": [
+      "com.github.erdragh.autos_n_rails.AutosNRails"
+    ]
   },
   "mixins": [
     "autos_n_rails.mixins.json"

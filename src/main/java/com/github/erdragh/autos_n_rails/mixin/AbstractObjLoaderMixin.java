@@ -1,5 +1,7 @@
 package com.github.erdragh.autos_n_rails.mixin;
 
+import com.github.erdragh.autos_n_rails.AutosNRails;
+import com.github.erdragh.autos_n_rails.config.AutosNRailsConfig;
 import dev.monarkhes.myron.impl.client.obj.AbstractObjLoader;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.client.resources.model.UnbakedModel;
@@ -17,7 +19,7 @@ public class AbstractObjLoaderMixin {
   @Inject(method = "loadModel", at = @At("HEAD"), cancellable = true)
   private void autos_n_rails$TEMPORARY_FIX_FOR_STEAM_N_RAILS_REMOVE_LATER(ResourceManager resourceManager, ResourceLocation identifier, ItemTransforms transformation, boolean isSideLit, CallbackInfoReturnable<UnbakedModel> cir) {
     final String namespace = identifier.getNamespace();
-    if ("railways".equals(namespace) || "create".equals(namespace)) {
+    if (AutosNRails.config.shouldFixModID(namespace)) {
       cir.setReturnValue(null);
     }
   }
