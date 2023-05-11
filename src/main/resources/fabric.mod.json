@@ -1,10 +1,17 @@
 {
   "schemaVersion": 1,
   "id": "autos_n_rails",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "name": "Autos'n'Rails",
-  "description": "",
-  "authors": [],
+  "description": "Fixes conflict between Myron and other mods using the same fix Automobility uses for Create",
+  "authors": [
+    {
+      "contact": {
+        "email": "enderjanyt@gmail.com"
+      },
+      "name": "Erdragh"
+    }
+  ],
   "contact": {
     "repo": "https://github.com/Erdragh/AutosNRails"
   },
@@ -24,6 +31,7 @@
     "fabric": "*",
     "minecraft": "1.18.2",
     "railways": ">=1.2.2+fabric-mc1.18.2",
-    "automobility": ">=0.3+1.18.2"
+    "automobility": ">=0.3+1.18.2",
+    "cloth-config": ">=6.4.90"
   }
 }
